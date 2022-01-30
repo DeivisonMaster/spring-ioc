@@ -12,6 +12,6 @@ public class VendaService {
 		System.out.printf("[Venda] Registrando venda %s no valor total de %f...\n", venda.getProduto(), valorTotal);
 		
 		PagSeguroService pagSeguroService = new PagSeguroService("855565dfs989898asd28787845");
-		pagSeguroService.efetuaPagamento(numeroCartao, valorTotal);
+		pagSeguroService.efetuarPagamento(numeroCartao, valorTotal);
 	}
 }
