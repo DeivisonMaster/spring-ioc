@@ -2,6 +2,7 @@ package br.com.loja.service;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.loja.model.GatewayPagamento;
@@ -9,8 +10,12 @@ import br.com.loja.model.Venda;
 
 @Service
 public class VendaService {
+	
+//  1 PROPRIEDADE
+//	@Autowired
 	private GatewayPagamento gateway;
 	
+//  2 CONSTRUCTOR	
 	public VendaService(GatewayPagamento gateway) {
 		this.gateway = gateway;
 	}
@@ -22,5 +27,11 @@ public class VendaService {
 		
 		gateway.efetuarPagamento(numeroCartao, valorTotal);
 	}
+	
+//  3 SETTER	
+//	@Autowired
+//	public void setGateway(GatewayPagamento gateway) {
+//		this.gateway = gateway;
+//	}
 }
  
