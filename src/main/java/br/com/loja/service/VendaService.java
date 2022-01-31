@@ -2,9 +2,12 @@ package br.com.loja.service;
 
 import java.math.BigDecimal;
 
+import org.springframework.stereotype.Service;
+
 import br.com.loja.model.GatewayPagamento;
 import br.com.loja.model.Venda;
 
+@Service
 public class VendaService {
 	private GatewayPagamento gateway;
 	
