@@ -2,13 +2,14 @@ package br.com.loja.service;
 
 import java.math.BigDecimal;
 
+import br.com.loja.model.GatewayPagamento;
 import br.com.loja.model.Venda;
 
 public class VendaService {
-	private PagSeguroService pagSeguroService;
+	private GatewayPagamento gateway;
 	
-	public VendaService(PagSeguroService pagSeguroService) {
-		this.pagSeguroService = pagSeguroService;
+	public VendaService(GatewayPagamento gateway) {
+		this.gateway = gateway;
 	}
 	
 	public void registrar(Venda venda, String numeroCartao){
@@ -16,7 +17,7 @@ public class VendaService {
 		
 		System.out.printf("[Venda] Registrando venda %s no valor total de %f...\n", venda.getProduto(), valorTotal);
 		
-		pagSeguroService.efetuarPagamento(numeroCartao, valorTotal);
+		gateway.efetuarPagamento(numeroCartao, valorTotal);
 	}
 }
  

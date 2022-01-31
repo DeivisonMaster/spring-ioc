@@ -17,7 +17,7 @@ public class VendaServiceTest {
 		venda.setPrecoUnitario(new BigDecimal("109.23"));
 		venda.setQuantidade(new Integer(2));
 		
-		VendaService vendaService = new VendaService(new PagSeguroService("855565dfs989898asd28787845"));
+		VendaService vendaService = new VendaService(new PayPalService("admin", "123"));
 		vendaService.registrar(venda, "402400711122233");
 		
 	}
