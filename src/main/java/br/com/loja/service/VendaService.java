@@ -2,7 +2,6 @@ package br.com.loja.service;
 
 import java.math.BigDecimal;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.loja.model.GatewayPagamento;
@@ -11,7 +10,12 @@ import br.com.loja.model.Venda;
 @Service
 public class VendaService {
 	
-//  1 PROPRIEDADE
+	/*
+	 * PONTOS DE INJEÇÃO
+	 * 1. por propriedade
+	 * 2. por construtor
+	 * 3. por método setter
+	 * */
 //	@Autowired
 	private GatewayPagamento gateway;
 	
@@ -28,10 +32,9 @@ public class VendaService {
 		gateway.efetuarPagamento(numeroCartao, valorTotal);
 	}
 	
-//  3 SETTER	
-//	@Autowired
-//	public void setGateway(GatewayPagamento gateway) {
-//		this.gateway = gateway;
-//	}
+	// 3 SETTER
+	public void setGateway(GatewayPagamento gateway) {
+		this.gateway = gateway;
+	}
 }
  

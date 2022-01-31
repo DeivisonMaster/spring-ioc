@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 import org.junit.Test;
 
 import br.com.loja.model.Venda;
-import br.com.loja.service.PagSeguroService;
 import br.com.loja.service.VendaService;
 
 public class VendaServiceTest {

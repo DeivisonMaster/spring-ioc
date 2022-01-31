@@ -1,7 +1,6 @@
 package br.com.loja.service;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
 import br.com.loja.model.GatewayPagamento;
 
