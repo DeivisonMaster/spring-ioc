@@ -13,8 +13,8 @@ public class Venda {
 	public void setPrecoUnitario(BigDecimal precoUnitario) {
 		this.precoUnitario = precoUnitario;
 	}
-	public Integer setQuantidade(Integer quantidade) {
-		return this.quantidade;
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
 	}
 	public Integer getQuantidade() {
 		return quantidade;
